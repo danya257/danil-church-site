@@ -1,12 +1,6 @@
 ```
-# WordPress specific
-wp-content/database/.ht.sqlite
-wp-content/cache/
-wp-content/upgrade/
-wp-config.php
-wp-content/plugins/
-wp-content/themes/*/node_modules/
-*.sql
+# Database files
+*.db
 
 # Python
 __pycache__/
@@ -18,29 +12,41 @@ env/
 venv/
 .venv/
 .ENV
-.python-version
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-*.tmp
-*.swp
-*.swo
-
-# Environment
+.ENV.local
 .env
 .env.local
-.env.
+.env.*
 
-# Uploads (if not wanted in version control)
-app/public/wp-content/uploads/
+# Logs
+*.log
 
-# Auto-generated
-auto_install_church.py
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# Testing
+.pytest_cache/
+.mypy_cache/
 ```
