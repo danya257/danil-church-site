@@ -1,25 +1,46 @@
 ```
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+# WordPress specific
+wp-content/database/.ht.sqlite
+wp-content/cache/
+wp-content/upgrade/
+wp-config.php
+wp-content/plugins/
+wp-content/themes/*/node_modules/
+*.sql
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.
+
+# Uploads (if not wanted in version control)
+app/public/wp-content/uploads/
+
+# Auto-generated
+auto_install_church.py
 ```
