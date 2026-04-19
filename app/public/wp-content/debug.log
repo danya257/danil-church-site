@@ -1,0 +1,175 @@
+[08-Mar-2026 22:35:15 UTC] PHP Fatal error:  Cannot redeclare church_customize_register_slider() (previously declared in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\functions.php:949) in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\functions.php on line 1053
+[09-Mar-2026 20:45:28 UTC] Automatic updates starting...
+[09-Mar-2026 20:45:31 UTC] Automatic updates complete.
+[09-Mar-2026 20:49:04 UTC] [09/Mar/2026:20:49:04 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[09-Mar-2026 20:49:04 UTC] [09/Mar/2026:20:49:04 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[14-Mar-2026 19:15:03 UTC] Automatic updates starting...
+[14-Mar-2026 19:15:03 UTC]   Automatic plugin updates starting...
+[14-Mar-2026 19:15:03 UTC]   Automatic plugin updates complete.
+[14-Mar-2026 19:15:04 UTC] Automatic updates complete.
+[14-Mar-2026 19:21:51 UTC] [14/Mar/2026:19:21:51 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[14-Mar-2026 19:21:51 UTC] [14/Mar/2026:19:21:51 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[14-Mar-2026 19:22:58 UTC] [14/Mar/2026:19:22:58 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[14-Mar-2026 19:22:58 UTC] [14/Mar/2026:19:22:58 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[14-Mar-2026 19:24:09 UTC] [14/Mar/2026:19:24:09 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[14-Mar-2026 19:24:09 UTC] [14/Mar/2026:19:24:09 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[14-Mar-2026 20:07:38 UTC] Automatic updates starting...
+[14-Mar-2026 20:07:38 UTC]   Automatic plugin updates starting...
+[14-Mar-2026 20:07:38 UTC]   Automatic plugin updates complete.
+[14-Mar-2026 20:07:38 UTC] Automatic updates complete.
+[14-Mar-2026 20:09:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function church_display_contacts_map() in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php:60
+Stack trace:
+#0 C:\Users\kimda\Local Sites\danil\app\public\wp-includes\template-loader.php(132): include()
+#1 C:\Users\kimda\Local Sites\danil\app\public\wp-blog-header.php(19): require_once('C:\\Users\\kimda\\...')
+#2 C:\Users\kimda\Local Sites\danil\app\public\index.php(17): require('C:\\Users\\kimda\\...')
+#3 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php on line 60
+[14-Mar-2026 20:10:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function church_display_contacts_map() in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php:60
+Stack trace:
+#0 C:\Users\kimda\Local Sites\danil\app\public\wp-includes\template-loader.php(132): include()
+#1 C:\Users\kimda\Local Sites\danil\app\public\wp-blog-header.php(19): require_once('C:\\Users\\kimda\\...')
+#2 C:\Users\kimda\Local Sites\danil\app\public\index.php(17): require('C:\\Users\\kimda\\...')
+#3 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php on line 60
+[14-Mar-2026 20:15:32 UTC] [14/Mar/2026:20:15:32 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[14-Mar-2026 20:15:32 UTC] [14/Mar/2026:20:15:32 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[14-Mar-2026 20:15:40 UTC] [14/Mar/2026:20:15:40 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[14-Mar-2026 20:15:40 UTC] [14/Mar/2026:20:15:40 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[14-Mar-2026 20:26:36 UTC] [14/Mar/2026:20:26:36 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[14-Mar-2026 20:26:37 UTC] [14/Mar/2026:20:26:37 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[17-Mar-2026 13:37:56 UTC] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\Users\kimda\Local Sites\danil\app\public\wp-content\plugins\elementor\includes\api.php on line 176
+[17-Mar-2026 13:37:57 UTC] PHP Warning:  wp_update_themes(): Произошла непредвиденная ошибка. Возможно, что-то не так с сайтом WordPress.org или с настройками вашего сервера. Если проблема не решится, обратитесь на <a href="https://ru.wordpress.org/support/forums/">форумы поддержки</a>. (Не удалось установить защищённое соединение с WordPress.org. Пожалуйста, свяжитесь с администратором сервера.) in C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php on line 6131
+[17-Mar-2026 13:37:57 UTC] PHP Warning:  wp_version_check(): Произошла непредвиденная ошибка. Возможно, что-то не так с сайтом WordPress.org или с настройками вашего сервера. Если проблема не решится, обратитесь на <a href="https://ru.wordpress.org/support/forums/">форумы поддержки</a>. (Не удалось установить защищённое соединение с WordPress.org. Пожалуйста, свяжитесь с администратором сервера.) in C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php on line 6131
+[17-Mar-2026 13:37:57 UTC] PHP Warning:  wp_update_plugins(): Произошла непредвиденная ошибка. Возможно, что-то не так с сайтом WordPress.org или с настройками вашего сервера. Если проблема не решится, обратитесь на <a href="https://ru.wordpress.org/support/forums/">форумы поддержки</a>. (Не удалось установить защищённое соединение с WordPress.org. Пожалуйста, свяжитесь с администратором сервера.) in C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php on line 6131
+[17-Mar-2026 13:37:57 UTC] PHP Warning:  get_core_checksums(): Произошла непредвиденная ошибка. Возможно, что-то не так с сайтом WordPress.org или с настройками вашего сервера. Если проблема не решится, обратитесь на <a href="https://ru.wordpress.org/support/forums/">форумы поддержки</a>. (Не удалось установить защищённое соединение с WordPress.org. Пожалуйста, свяжитесь с администратором сервера.) in C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php on line 6131
+[17-Mar-2026 13:38:44 UTC] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\Users\kimda\Local Sites\danil\app\public\wp-content\plugins\elementor\includes\api.php on line 176
+[17-Mar-2026 13:38:53 UTC] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\Users\kimda\Local Sites\danil\app\public\wp-content\plugins\elementor\includes\api.php on line 176
+[17-Mar-2026 13:39:29 UTC] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\Users\kimda\Local Sites\danil\app\public\wp-content\plugins\elementor\includes\api.php on line 176
+[17-Mar-2026 13:43:48 UTC] [17/Mar/2026:13:43:48 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[17-Mar-2026 13:43:48 UTC] [17/Mar/2026:13:43:48 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[17-Mar-2026 13:44:01 UTC] [17/Mar/2026:13:44:01 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[17-Mar-2026 13:44:01 UTC] [17/Mar/2026:13:44:01 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[17-Mar-2026 14:30:42 UTC] [17/Mar/2026:14:30:42 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[17-Mar-2026 14:30:42 UTC] [17/Mar/2026:14:30:42 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[17-Mar-2026 14:31:59 UTC] [17/Mar/2026:14:31:59 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[17-Mar-2026 14:31:59 UTC] [17/Mar/2026:14:31:59 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[17-Mar-2026 14:35:44 UTC] [17/Mar/2026:14:35:44 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[17-Mar-2026 14:35:44 UTC] [17/Mar/2026:14:35:44 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[25-Mar-2026 16:48:36 UTC] Automatic updates starting...
+[25-Mar-2026 16:48:38 UTC]   Automatic plugin updates starting...
+[25-Mar-2026 16:48:38 UTC]   Automatic plugin updates complete.
+[25-Mar-2026 16:48:39 UTC] Automatic updates complete.
+[19-Apr-2026 17:58:50 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение in C:\Users\kimda\Local Sites\danil\app\public\wp-includes\class-wpdb.php on line 1994
+[19-Apr-2026 18:20:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function church_display_contacts_map() in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php:60
+Stack trace:
+#0 C:\Users\kimda\Local Sites\danil\app\public\wp-includes\template-loader.php(132): include()
+#1 C:\Users\kimda\Local Sites\danil\app\public\wp-blog-header.php(19): require_once('C:\\Users\\kimda\\...')
+#2 C:\Users\kimda\Local Sites\danil\app\public\index.php(17): require('C:\\Users\\kimda\\...')
+#3 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php on line 60
+[19-Apr-2026 18:20:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function church_display_contacts_map() in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php:60
+Stack trace:
+#0 C:\Users\kimda\Local Sites\danil\app\public\wp-includes\template-loader.php(132): include()
+#1 C:\Users\kimda\Local Sites\danil\app\public\wp-blog-header.php(19): require_once('C:\\Users\\kimda\\...')
+#2 C:\Users\kimda\Local Sites\danil\app\public\index.php(17): require('C:\\Users\\kimda\\...')
+#3 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php on line 60
+[19-Apr-2026 18:21:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function church_display_contacts_map() in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php:60
+Stack trace:
+#0 C:\Users\kimda\Local Sites\danil\app\public\wp-includes\template-loader.php(132): include()
+#1 C:\Users\kimda\Local Sites\danil\app\public\wp-blog-header.php(19): require_once('C:\\Users\\kimda\\...')
+#2 C:\Users\kimda\Local Sites\danil\app\public\index.php(17): require('C:\\Users\\kimda\\...')
+#3 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php on line 60
+[19-Apr-2026 18:23:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function church_display_contacts_map() in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php:60
+Stack trace:
+#0 C:\Users\kimda\Local Sites\danil\app\public\wp-includes\template-loader.php(132): include()
+#1 C:\Users\kimda\Local Sites\danil\app\public\wp-blog-header.php(19): require_once('C:\\Users\\kimda\\...')
+#2 C:\Users\kimda\Local Sites\danil\app\public\index.php(17): require('C:\\Users\\kimda\\...')
+#3 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\wp-content\themes\church-kadence-child\page-contacts.php on line 60
+[19-Apr-2026 18:28:52 UTC] PHP Deprecated:  Функция get_page_by_title с версии 6.2.0 <strong>считается устаревшей</strong>! Используйте WP_Query. in C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php on line 6131
+[19-Apr-2026 18:28:52 UTC] PHP Stack trace:
+[19-Apr-2026 18:28:52 UTC] PHP   1. {main}() C:\Users\kimda\Local Sites\danil\app\public\import.php:0
+[19-Apr-2026 18:28:52 UTC] PHP   2. get_page_by_title($page_title = 'Контакты', $output = *uninitialized*, $post_type = *uninitialized*) C:\Users\kimda\Local Sites\danil\app\public\import.php:89
+[19-Apr-2026 18:28:52 UTC] PHP   3. _deprecated_function($function_name = 'get_page_by_title', $version = '6.2.0', $replacement = 'WP_Query') C:\Users\kimda\Local Sites\danil\app\public\wp-includes\deprecated.php:4575
+[19-Apr-2026 18:28:52 UTC] PHP   4. wp_trigger_error($function_name = '', $message = 'Функция get_page_by_title с версии 6.2.0 <strong>считается устаревшей</strong>! Используйте WP_Query.', $error_level = 16384) C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php:5596
+[19-Apr-2026 18:28:52 UTC] PHP   5. trigger_error($message = 'Функция get_page_by_title с версии 6.2.0 <strong>считается устаревшей</strong>! Используйте WP_Query.', $error_level = 16384) C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php:6131
+[19-Apr-2026 18:28:52 UTC] PHP Deprecated:  Функция get_page_by_title с версии 6.2.0 <strong>считается устаревшей</strong>! Используйте WP_Query. in C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php on line 6131
+[19-Apr-2026 18:28:52 UTC] PHP Stack trace:
+[19-Apr-2026 18:28:52 UTC] PHP   1. {main}() C:\Users\kimda\Local Sites\danil\app\public\import.php:0
+[19-Apr-2026 18:28:52 UTC] PHP   2. get_page_by_title($page_title = 'Расписание богослужений', $output = *uninitialized*, $post_type = *uninitialized*) C:\Users\kimda\Local Sites\danil\app\public\import.php:90
+[19-Apr-2026 18:28:52 UTC] PHP   3. _deprecated_function($function_name = 'get_page_by_title', $version = '6.2.0', $replacement = 'WP_Query') C:\Users\kimda\Local Sites\danil\app\public\wp-includes\deprecated.php:4575
+[19-Apr-2026 18:28:52 UTC] PHP   4. wp_trigger_error($function_name = '', $message = 'Функция get_page_by_title с версии 6.2.0 <strong>считается устаревшей</strong>! Используйте WP_Query.', $error_level = 16384) C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php:5596
+[19-Apr-2026 18:28:52 UTC] PHP   5. trigger_error($message = 'Функция get_page_by_title с версии 6.2.0 <strong>считается устаревшей</strong>! Используйте WP_Query.', $error_level = 16384) C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php:6131
+[19-Apr-2026 18:28:52 UTC] PHP Deprecated:  Функция get_page_by_title с версии 6.2.0 <strong>считается устаревшей</strong>! Используйте WP_Query. in C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php on line 6131
+[19-Apr-2026 18:28:52 UTC] PHP Stack trace:
+[19-Apr-2026 18:28:52 UTC] PHP   1. {main}() C:\Users\kimda\Local Sites\danil\app\public\import.php:0
+[19-Apr-2026 18:28:52 UTC] PHP   2. get_page_by_title($page_title = 'Духовенство собора', $output = *uninitialized*, $post_type = *uninitialized*) C:\Users\kimda\Local Sites\danil\app\public\import.php:91
+[19-Apr-2026 18:28:52 UTC] PHP   3. _deprecated_function($function_name = 'get_page_by_title', $version = '6.2.0', $replacement = 'WP_Query') C:\Users\kimda\Local Sites\danil\app\public\wp-includes\deprecated.php:4575
+[19-Apr-2026 18:28:52 UTC] PHP   4. wp_trigger_error($function_name = '', $message = 'Функция get_page_by_title с версии 6.2.0 <strong>считается устаревшей</strong>! Используйте WP_Query.', $error_level = 16384) C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php:5596
+[19-Apr-2026 18:28:52 UTC] PHP   5. trigger_error($message = 'Функция get_page_by_title с версии 6.2.0 <strong>считается устаревшей</strong>! Используйте WP_Query.', $error_level = 16384) C:\Users\kimda\Local Sites\danil\app\public\wp-includes\functions.php:6131
+[19-Apr-2026 18:28:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\Users\kimda\Local Sites\danil\app\public\import.php:128
+Stack trace:
+#0 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\import.php on line 128
+[19-Apr-2026 18:30:49 UTC] [19/Apr/2026:18:30:49 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[19-Apr-2026 18:30:49 UTC] [19/Apr/2026:18:30:49 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[19-Apr-2026 18:32:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\Users\kimda\Local Sites\danil\app\public\import.php:128
+Stack trace:
+#0 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\import.php on line 128
+[19-Apr-2026 18:32:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\Users\kimda\Local Sites\danil\app\public\import.php:128
+Stack trace:
+#0 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\import.php on line 128
+[19-Apr-2026 18:33:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\Users\kimda\Local Sites\danil\app\public\import.php:128
+Stack trace:
+#0 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\import.php on line 128
+[19-Apr-2026 18:33:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\Users\kimda\Local Sites\danil\app\public\import.php:128
+Stack trace:
+#0 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\import.php on line 128
+[19-Apr-2026 18:35:21 UTC] [19/Apr/2026:18:35:21 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[19-Apr-2026 18:35:21 UTC] [19/Apr/2026:18:35:21 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[19-Apr-2026 18:37:46 UTC] [19/Apr/2026:18:37:46 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 6ddc66e7f3ed88cfd8e68d8dad76de19.json  
+
+[19-Apr-2026 18:37:46 UTC] [19/Apr/2026:18:37:46 +0000] [0;37mDEBUG[0m: [Kadence Blocks]: Found cache file: 4b74e0e82d5719bb95cdeda9590f88c5.json  
+
+[19-Apr-2026 18:45:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\Users\kimda\Local Sites\danil\app\public\import.php:81
+Stack trace:
+#0 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\import.php on line 81
+[19-Apr-2026 18:45:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_create_category() in C:\Users\kimda\Local Sites\danil\app\public\import.php:81
+Stack trace:
+#0 {main}
+  thrown in C:\Users\kimda\Local Sites\danil\app\public\import.php on line 81
