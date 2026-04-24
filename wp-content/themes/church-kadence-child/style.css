@@ -1,0 +1,1562 @@
+/*
+Theme Name: Church Kadence Child
+Theme URI: https://alexander-nevskiysobor.ru
+Description: Дочерняя тема для храма с церковными шрифтами
+Author: Ваше Имя
+Template: kadence
+Version: 2.0.0
+Text Domain: church-kadence-child
+*/
+
+/* ==========================================================================
+   1. ПОДКЛЮЧЕНИЕ ЦЕРКОВНЫХ ШРИФТОВ
+   ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Ruslan+Display&family=Inter:wght@300;400;500;600&display=swap');
+
+   /* ==========================================================================
+      2. ЦВЕТОВЫЕ ПЕРЕМЕННЫЕ
+      ========================================================================== */
+   
+   :root {
+       /* Основные цвета */
+       --color-primary: #1a1a2e;
+       --color-primary-light: #2d2d44;
+       --color-accent: #c9a961;
+       --color-accent-hover: #b8960c;
+       --color-accent-light: #f0e6c8;
+       --color-secondary: #8b2635;
+       --color-secondary-hover: #a63042;
+       
+       /* Фоны */
+       --color-bg: #faf8f5;
+       --color-bg-alt: #f5f0e8;
+       --color-white: #ffffff;
+       
+       /* Текст */
+       --color-text: #2d2d2d;
+       --color-text-light: #555555;
+       --color-text-muted: #777777;
+       --color-text-on-dark: #f5f5f5;
+       
+       /* Эффекты */
+       --shadow-card: 0 5px 20px rgba(0,0,0,0.08);
+       --shadow-hover: 0 15px 40px rgba(0,0,0,0.12);
+       --radius: 12px;
+       --transition: all 0.3s ease;
+   }
+   
+   /* ==========================================================================
+      3. БАЗОВЫЕ НАСТРОЙКИ
+      ========================================================================== */
+   
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+   }
+   
+   body {
+       font-family: 'Inter', sans-serif;
+       color: var(--color-text);
+       background: var(--color-bg);
+       line-height: 1.6;
+       overflow-x: hidden;
+   }
+   
+   /* ==========================================================================
+      4. ЦЕРКОВНЫЕ ШРИФТЫ ДЛЯ ЗАГОЛОВКОВ
+      ========================================================================== */
+   
+   h1, h2, h3, h4, h5, h6 {
+       font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+       color: var(--color-primary);
+       line-height: 1.3;
+       font-weight: 600;
+       margin-bottom: 0.5em;
+   }
+   
+   /* Особо важные заголовки - церковный шрифт Ruslan Display */
+   .hero-title,
+   .section-title h2,
+   .site-logo a,
+   .footer-widget h4,
+   .history-card-title,
+   .slider-title {
+       font-family: 'Ruslan Display', 'Cormorant Garamond', serif;
+       letter-spacing: 0.02em;
+   }
+   
+   /* Ссылки */
+   a {
+       text-decoration: none;
+       color: var(--color-primary);
+       transition: var(--transition);
+   }
+   
+   a:hover {
+       color: var(--color-accent);
+   }
+   
+   /* Изображения */
+   img {
+       max-width: 100%;
+       height: auto;
+       display: block;
+   }
+   
+   /* Контейнер */
+   .container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 0 20px;
+   }
+   
+   /* ==========================================================================
+      5. АНИМАЦИИ
+      ========================================================================== */
+   
+   @keyframes fadeInUp {
+       from { opacity: 0; transform: translateY(30px); }
+       to { opacity: 1; transform: translateY(0); }
+   }
+   
+   @keyframes shimmer {
+       0% { background-position: -200% center; }
+       100% { background-position: 200% center; }
+   }
+   
+   @keyframes float {
+       0%, 100% { transform: translateY(0); }
+       50% { transform: translateY(-15px); }
+   }
+   
+   @keyframes floatReverse {
+       0%, 100% { transform: translateY(0); }
+       50% { transform: translateY(15px); }
+   }
+   
+   @keyframes pulse {
+       0%, 100% { transform: scale(1); opacity: 1; }
+       50% { transform: scale(1.05); opacity: 0.8; }
+   }
+   
+   @keyframes countUp {
+       from { opacity: 0; transform: translateY(20px); }
+       to { opacity: 1; transform: translateY(0); }
+   }
+   
+   @keyframes pageLoad {
+       from { opacity: 0; filter: blur(10px); }
+       to { opacity: 1; filter: blur(0); }
+   }
+   
+   @keyframes slideUp {
+       from { opacity: 0; transform: translateY(30px); }
+       to { opacity: 1; transform: translateY(0); }
+   }
+   
+   /* ==========================================================================
+      6. ОБЩИЕ КЛАССЫ АНИМАЦИИ
+      ========================================================================== */
+   
+   .animate-fade-in {
+       animation: fadeInUp 0.8s ease-out forwards;
+   }
+   
+   .animate-fade-in-delay {
+       animation: fadeInUp 0.8s ease-out 0.2s backwards;
+   }
+   
+   .gold-text,
+   .gold-shine {
+       background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light), var(--color-accent));
+       background-size: 200% auto;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       background-clip: text;
+       animation: shimmer 3s linear infinite;
+   }
+   
+   /* Scroll Reveal */
+   .scroll-reveal {
+       opacity: 0;
+       transform: translateY(40px);
+       transition: opacity 0.8s ease, transform 0.8s ease;
+       will-change: opacity, transform;
+   }
+   
+   .scroll-reveal.active {
+       opacity: 1;
+       transform: translateY(0);
+   }
+   
+   /* Задержки */
+   .scroll-reveal.delay-1 { transition-delay: 0.1s; }
+   .scroll-reveal.delay-2 { transition-delay: 0.2s; }
+   .scroll-reveal.delay-3 { transition-delay: 0.3s; }
+   .scroll-reveal.delay-4 { transition-delay: 0.4s; }
+   .scroll-reveal.delay-5 { transition-delay: 0.5s; }
+   
+   /* Варианты появления */
+   .scroll-reveal.from-left { transform: translateX(-60px); }
+   .scroll-reveal.from-right { transform: translateX(60px); }
+   .scroll-reveal.from-bottom { transform: translateY(60px); }
+   
+   .scroll-reveal.from-left.active,
+   .scroll-reveal.from-right.active,
+   .scroll-reveal.from-bottom.active {
+       transform: translateX(0);
+   }
+   
+   /* Плавающие элементы */
+   .float { animation: float 6s ease-in-out infinite; }
+   .float-reverse { animation: floatReverse 7s ease-in-out infinite; }
+   .pulse { animation: pulse 3s ease-in-out infinite; }
+   
+   /* Счетчики */
+   .counter {
+       font-size: 48px;
+       font-weight: 700;
+       color: var(--color-accent);
+       font-family: 'Cormorant Garamond', serif;
+   }
+   
+   /* Разделитель с орнаментом */
+   .ornament-divider {
+       text-align: center;
+       margin: 50px 0;
+       position: relative;
+       height: 2px;
+       background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+   }
+   
+   .ornament-divider::before,
+   .ornament-divider::after {
+       content: '✦';
+       position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+       color: var(--color-accent);
+       font-size: 20px;
+       animation: float 4s ease-in-out infinite;
+   }
+   
+   .ornament-divider::before { left: 0; animation-delay: 0s; }
+   .ornament-divider::after { right: 0; animation-delay: 2s; }
+   
+   /* Загрузка страницы */
+   body.loaded {
+       animation: pageLoad 0.6s ease-out forwards;
+   }
+   
+   /* ==========================================================================
+      7. ШАПКА САЙТА
+      ========================================================================== */
+   
+   .site-header {
+       background: var(--color-white);
+       box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+       position: sticky;
+       top: 0;
+       z-index: 1000;
+   }
+   
+   .header-inner {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 15px 0;
+   }
+   
+   .site-logo a {
+       display: block;
+       color: var(--color-primary);
+       font-family: 'Ruslan Display', serif;
+       font-size: 24px;
+   }
+   
+   .logo img {
+       height: 60px;
+       transition: transform 0.3s ease;
+   }
+   
+   .logo:hover img {
+       transform: scale(1.05);
+   }
+   
+   /* ==========================================================================
+      8. МЕНЮ (ДЕСКТОП)
+      ========================================================================== */
+   
+   .main-navigation {
+       display: flex;
+       align-items: center;
+   }
+   
+   .menu-primary {
+       display: flex;
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       gap: 5px;
+       align-items: center;
+   }
+   
+   .menu-primary > li {
+       position: relative;
+   }
+   
+   .menu-primary > li > a {
+       padding: 15px 18px;
+       font-weight: 500;
+       color: var(--color-primary);
+       border-radius: 6px;
+       transition: var(--transition);
+       display: flex;
+       align-items: center;
+       gap: 5px;
+       font-family: 'Inter', sans-serif;
+       font-size: 15px;
+   }
+   
+   .menu-primary > li > a:hover,
+   .menu-primary > li.active > a,
+   .menu-primary > li.current-menu-item > a {
+       color: var(--color-accent);
+       background: rgba(201, 169, 97, 0.1);
+   }
+   
+   /* Выпадающее подменю */
+   .menu-primary .sub-menu {
+       position: absolute;
+       top: 100%;
+       left: 0;
+       background: var(--color-white);
+       min-width: 240px;
+       border-radius: 12px;
+       box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+       border-top: 3px solid var(--color-accent);
+       padding: 10px 0;
+       opacity: 0;
+       visibility: hidden;
+       transform: translateY(10px);
+       transition: all 0.3s ease;
+       z-index: 100;
+       list-style: none;
+       margin: 0;
+   }
+   
+   .menu-primary > li:hover > .sub-menu,
+   .menu-primary > li.has-children:focus-within > .sub-menu {
+       opacity: 1;
+       visibility: visible;
+       transform: translateY(0);
+   }
+   
+   .sub-menu li {
+       margin: 0;
+   }
+   
+   .sub-menu a {
+       display: block;
+       padding: 12px 25px;
+       color: var(--color-text);
+       font-size: 14px;
+       transition: var(--transition);
+       border-left: 3px solid transparent;
+       font-family: 'Inter', sans-serif;
+   }
+   
+   .sub-menu a:hover,
+   .sub-menu a.current {
+       background: var(--color-bg);
+       color: var(--color-accent);
+       border-left-color: var(--color-accent);
+       padding-left: 30px;
+   }
+   
+   /* Вложенные подменю */
+   .sub-menu .sub-menu {
+       top: 0;
+       left: 100%;
+       margin-left: 10px;
+   }
+   
+   .sub-menu li:hover > .sub-menu {
+       opacity: 1;
+       visibility: visible;
+       transform: translateY(0);
+   }
+   
+   /* Стрелочка для подменю */
+   .menu-item-has-children > a::after {
+       content: '▼';
+       font-size: 8px;
+       margin-left: 6px;
+       transition: transform 0.3s ease;
+       opacity: 0.6;
+   }
+   
+   .menu-item-has-children:hover > a::after {
+       transform: rotate(180deg);
+       opacity: 1;
+   }
+   
+   /* Кнопка пожертвований в меню */
+   .donate-menu-item {
+       margin-left: 10px;
+   }
+   
+   .donate-button {
+       background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-hover));
+       color: var(--color-white) !important;
+       padding: 12px 28px !important;
+       border-radius: 50px;
+       font-weight: 600;
+       box-shadow: 0 4px 15px rgba(139, 38, 53, 0.3);
+       position: relative;
+       overflow: hidden;
+   }
+   
+   .donate-button:hover {
+       transform: translateY(-2px);
+       box-shadow: 0 8px 25px rgba(139, 38, 53, 0.4);
+   }
+   
+   /* ==========================================================================
+      9. МОБИЛЬНОЕ МЕНЮ (ИСПРАВЛЕНО: ТЁМНЫЙ ТЕКСТ!)
+      ========================================================================== */
+   
+   .mobile-toggle {
+       display: none;
+       background: none;
+       border: none;
+       padding: 10px;
+       cursor: pointer;
+       z-index: 1001;
+       margin-left: auto;
+   }
+   
+   .toggle-icon,
+   .toggle-icon::before,
+   .toggle-icon::after {
+       display: block;
+       width: 25px;
+       height: 3px;
+       background: var(--color-primary);
+       position: relative;
+       transition: 0.3s ease;
+       border-radius: 3px;
+   }
+   
+   .toggle-icon::before,
+   .toggle-icon::after {
+       content: '';
+       position: absolute;
+       left: 0;
+   }
+   
+   .toggle-icon::before { top: -8px; }
+   .toggle-icon::after { top: 8px; }
+   
+   .mobile-toggle.active .toggle-icon {
+       background: transparent;
+   }
+   
+   .mobile-toggle.active .toggle-icon::before {
+       top: 0;
+       transform: rotate(45deg);
+   }
+   
+   .mobile-toggle.active .toggle-icon::after {
+       top: 0;
+       transform: rotate(-45deg);
+   }
+   
+   .mobile-menu-overlay {
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background: rgba(0, 0, 0, 0.6);
+       z-index: 2000;
+       opacity: 0;
+       visibility: hidden;
+       transition: all 0.3s ease;
+       backdrop-filter: blur(3px);
+   }
+   
+   .mobile-menu-overlay.active {
+       opacity: 1;
+       visibility: visible;
+   }
+   
+   .mobile-menu-container {
+       position: absolute;
+       top: 0;
+       right: 0;
+       width: 85%;
+       max-width: 350px;
+       height: 100%;
+       background: var(--color-white);
+       padding: 20px;
+       transform: translateX(100%);
+       transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+       overflow-y: auto;
+       box-shadow: -5px 0 30px rgba(0,0,0,0.2);
+   }
+   
+   .mobile-menu-overlay.active .mobile-menu-container {
+       transform: translateX(0);
+   }
+   
+   .mobile-menu-close {
+       position: absolute;
+       top: 15px;
+       right: 15px;
+       background: none;
+       border: none;
+       font-size: 32px;
+       cursor: pointer;
+       color: var(--color-primary);
+       width: 40px;
+       height: 40px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       border-radius: 50%;
+       transition: all 0.3s ease;
+   }
+   
+   .mobile-menu-close:hover {
+       background: var(--color-bg);
+       color: var(--color-secondary);
+   }
+   
+   .mobile-menu-list {
+       list-style: none;
+       margin: 70px 0 0 0;
+       padding: 0;
+   }
+   
+   .mobile-menu-list li {
+       border-bottom: 1px solid #eee;
+       margin: 0;
+   }
+   
+   /* 🔥 ИСПРАВЛЕНИЕ: Тёмный текст в мобильном меню */
+   .mobile-menu-list a {
+       display: block;
+       padding: 15px 10px;
+       font-size: 16px;
+       font-weight: 500;
+       color: var(--color-primary) !important;
+       transition: all 0.3s ease;
+       font-family: 'Inter', sans-serif;
+   }
+   
+   .mobile-menu-list a:hover,
+   .mobile-menu-list a.current {
+       color: var(--color-accent) !important;
+       padding-left: 15px;
+   }
+   
+   .mobile-menu-list .sub-menu {
+       position: static;
+       opacity: 1;
+       visibility: visible;
+       transform: none;
+       box-shadow: none;
+       border: none;
+       padding-left: 15px;
+       background: transparent;
+       max-height: 0;
+       overflow: hidden;
+       transition: max-height 0.3s ease;
+       margin: 0;
+   }
+   
+   .mobile-menu-list li.active > .sub-menu {
+       max-height: 500px;
+   }
+   
+   /* 🔥 ИСПРАВЛЕНИЕ: Тёмный текст в подменю */
+   .mobile-menu-list .sub-menu a {
+       font-size: 14px;
+       padding: 12px 10px;
+       color: var(--color-text-light) !important;
+       font-family: 'Inter', sans-serif;
+   }
+   
+   .mobile-menu-list .sub-menu a:hover {
+       color: var(--color-accent) !important;
+   }
+   
+   .mobile-menu-list .dropdown-toggle {
+       position: absolute;
+       right: 10px;
+       top: 50%;
+       transform: translateY(-50%);
+       padding: 10px;
+       cursor: pointer;
+       transition: transform 0.3s ease;
+   }
+   
+   .mobile-menu-list li.active > .dropdown-toggle {
+       transform: translateY(-50%) rotate(180deg);
+   }
+   
+   .mobile-donate {
+       margin-top: 30px;
+       padding-top: 20px;
+       border-top: 2px solid var(--color-bg);
+       text-align: center;
+   }
+   
+   .mobile-donate .donate-button {
+       display: inline-block;
+       width: 100%;
+       padding: 15px !important;
+       text-align: center;
+   }
+   
+   /* ==========================================================================
+      10. HERO СЕКЦИЯ
+      ========================================================================== */
+   
+   .hero {
+       position: relative;
+       min-height: 550px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+       text-align: center;
+       color: var(--color-white);
+       padding: 60px 20px;
+       overflow: hidden;
+   }
+   
+   .hero::before {
+       content: '';
+       position: absolute;
+       inset: 0;
+       background: linear-gradient(135deg, rgba(26,26,46,0.85), rgba(45,45,68,0.75));
+       z-index: 1;
+   }
+   
+   .hero-content {
+       position: relative;
+       z-index: 2;
+       max-width: 800px;
+   }
+   
+   .hero-title {
+       font-size: 42px;
+       margin-bottom: 20px;
+       color: var(--color-white);
+       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+   }
+   
+   .hero-subtitle {
+       font-size: 20px;
+       opacity: 0.95;
+       margin-bottom: 35px;
+       color: var(--color-white);
+       text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+   }
+   
+   .hero-buttons {
+       display: flex;
+       gap: 15px;
+       justify-content: center;
+       flex-wrap: wrap;
+   }
+   
+   .hero-button {
+       display: inline-block;
+       padding: 16px 45px;
+       background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+       color: var(--color-primary) !important;
+       border-radius: 50px;
+       font-weight: 600;
+       font-size: 16px;
+       box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
+       position: relative;
+       overflow: hidden;
+   }
+   
+   .hero-button:hover {
+       transform: translateY(-3px);
+       box-shadow: 0 15px 40px rgba(201, 169, 97, 0.4);
+   }
+   
+   .hero-button-outline {
+       display: inline-block;
+       padding: 16px 45px;
+       background: transparent;
+       color: var(--color-white) !important;
+       border: 2px solid var(--color-accent);
+       border-radius: 50px;
+       font-weight: 600;
+       font-size: 16px;
+       transition: var(--transition);
+   }
+   
+   .hero-button-outline:hover {
+       background: var(--color-accent);
+       color: var(--color-primary) !important;
+       transform: translateY(-3px);
+   }
+   
+   /* ==========================================================================
+      11. СЕКЦИИ И ЗАГОЛОВКИ
+      ========================================================================== */
+   
+   .services-section {
+       padding: 80px 0;
+       background: var(--color-white);
+   }
+   
+   .news-section {
+       padding: 80px 0;
+       background: var(--color-bg);
+   }
+   
+   .schedule-section {
+       padding: 60px 0;
+       background: var(--color-white);
+   }
+   
+   .section-title {
+       text-align: center;
+       margin-bottom: 50px;
+   }
+   
+   .section-title h2 {
+       font-size: 32px;
+       margin-bottom: 15px;
+       color: var(--color-primary);
+   }
+   
+   .section-title p {
+       color: var(--color-text-light);
+       max-width: 600px;
+       margin: 0 auto;
+   }
+   
+   /* ==========================================================================
+      12. КАРТОЧКИ УСЛУГ
+      ========================================================================== */
+   
+   .services-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+       gap: 30px;
+   }
+   
+   .service-card {
+       background: var(--color-bg);
+       border-radius: var(--radius);
+       padding: 35px 30px;
+       text-align: center;
+       box-shadow: var(--shadow-card);
+       transition: var(--transition);
+       border-bottom: 3px solid transparent;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       position: relative;
+       overflow: hidden;
+   }
+   
+   .service-card:hover {
+       transform: translateY(-8px);
+       box-shadow: var(--shadow-hover);
+       border-bottom-color: var(--color-accent);
+   }
+   
+   .service-icon {
+       width: 70px;
+       height: 70px;
+       background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-bottom: 20px;
+       font-size: 28px;
+       color: var(--color-primary);
+       position: relative;
+       transition: transform 0.4s ease;
+   }
+   
+   .service-card:hover .service-icon {
+       transform: scale(1.1) rotate(5deg);
+   }
+   
+   .service-card h3 {
+       font-size: 20px;
+       margin-bottom: 12px;
+       color: var(--color-primary);
+   }
+   
+   .service-card p {
+       color: var(--color-text-light);
+       margin-bottom: 20px;
+       flex-grow: 1;
+   }
+   
+   .service-link {
+       color: var(--color-secondary);
+       font-weight: 500;
+       display: inline-flex;
+       align-items: center;
+       gap: 5px;
+   }
+   
+   .service-link:hover {
+       gap: 10px;
+   }
+   
+   /* ==========================================================================
+      13. БЛОК НОВОСТЕЙ
+      ========================================================================== */
+   
+   .news-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+       gap: 30px;
+   }
+   
+   .news-card {
+       background: var(--color-white);
+       border-radius: var(--radius);
+       overflow: hidden;
+       box-shadow: var(--shadow-card);
+       transition: var(--transition);
+       position: relative;
+   }
+   
+   .news-card:hover {
+       transform: translateY(-5px);
+       box-shadow: var(--shadow-hover);
+   }
+   
+   .news-image {
+       height: 200px;
+       background: #e0e0e0;
+       background-size: cover;
+       background-position: center;
+       display: block;
+   }
+   
+   .news-content {
+       padding: 25px;
+   }
+   
+   .news-date {
+       display: inline-block;
+       padding: 5px 15px;
+       background: var(--color-accent);
+       color: var(--color-primary);
+       border-radius: 20px;
+       font-size: 13px;
+       font-weight: 600;
+       margin-bottom: 12px;
+   }
+   
+   .news-card h3 {
+       font-size: 18px;
+       margin-bottom: 10px;
+       color: var(--color-primary);
+   }
+   
+   .news-card h3 a {
+       color: var(--color-primary);
+   }
+   
+   .news-card h3 a:hover {
+       color: var(--color-accent);
+   }
+   
+   .news-excerpt {
+       color: var(--color-text-light);
+       font-size: 14px;
+       margin-bottom: 15px;
+   }
+   
+   .news-read-more {
+       color: var(--color-secondary);
+       font-weight: 500;
+       font-size: 14px;
+   }
+   
+   /* ==========================================================================
+      14. РАСПИСАНИЕ
+      ========================================================================== */
+   
+   .schedule-table {
+       background: var(--color-white);
+       border-radius: var(--radius);
+       box-shadow: var(--shadow-card);
+       overflow: hidden;
+   }
+   
+   .schedule-row {
+       display: grid;
+       grid-template-columns: 1fr 2fr 1fr;
+       padding: 20px 25px;
+       border-bottom: 1px solid #eee;
+       align-items: center;
+       transition: var(--transition);
+   }
+   
+   .schedule-row:last-child {
+       border-bottom: none;
+   }
+   
+   .schedule-row:hover {
+       background: var(--color-bg);
+   }
+   
+   .schedule-day {
+       font-weight: 600;
+       color: var(--color-primary);
+       font-family: 'Cormorant Garamond', serif;
+       font-size: 18px;
+   }
+   
+   .schedule-service {
+       color: var(--color-text);
+   }
+   
+   .schedule-time {
+       background: var(--color-accent);
+       color: var(--color-primary);
+       padding: 5px 15px;
+       border-radius: 20px;
+       font-weight: 600;
+       font-size: 14px;
+       text-align: center;
+   }
+   
+   /* ==========================================================================
+      15. АРХИВ ИСТОРИИ
+      ========================================================================== */
+   
+   .history-archive-grid {
+       display: grid;
+       grid-template-columns: 1fr;
+       gap: 40px;
+   }
+   
+   .history-card {
+       position: relative;
+       background: var(--color-white);
+       border-radius: 16px;
+       overflow: hidden;
+       box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+       transition: all 0.4s ease;
+       display: grid;
+       grid-template-columns: 350px 1fr;
+       min-height: 300px;
+   }
+   
+   .history-card:hover {
+       transform: translateX(8px);
+       box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+   }
+   
+   .history-card-link {
+       position: absolute;
+       inset: 0;
+       z-index: 10;
+       width: 100%;
+       height: 100%;
+   }
+   
+   .history-card-image-wrapper {
+       position: relative;
+       height: 100%;
+       overflow: hidden;
+   }
+   
+   .history-card-image {
+       width: 100%;
+       height: 100%;
+       min-height: 300px;
+   }
+   
+   .history-card-image img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       transition: transform 0.6s ease;
+   }
+   
+   .history-card:hover .history-card-image img {
+       transform: scale(1.05);
+   }
+   
+   .history-card-image-placeholder {
+       background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 80px;
+   }
+   
+   .history-card-content-wrapper {
+       display: flex;
+       align-items: center;
+       padding: 40px 50px;
+   }
+   
+   .history-card-content {
+       width: 100%;
+   }
+   
+   .history-card-header {
+       text-align: center;
+       margin-bottom: 20px;
+   }
+   
+   .history-card-title {
+       font-size: 28px;
+       margin: 0;
+       font-family: 'Cormorant Garamond', serif;
+       color: var(--color-primary);
+       line-height: 1.3;
+   }
+   
+   .history-card-meta {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 20px;
+       margin-bottom: 25px;
+       font-size: 14px;
+   }
+   
+   .history-card-date {
+       color: var(--color-text-light);
+   }
+   
+   .history-card-text {
+       margin-bottom: 25px;
+       text-align: justify;
+   }
+   
+   .history-card-text p {
+       color: var(--color-text);
+       font-size: 15px;
+       line-height: 1.8;
+       margin: 0;
+   }
+   
+   .history-card-footer {
+       text-align: center;
+   }
+   
+   .history-read-more {
+       color: var(--color-secondary);
+       font-weight: 600;
+       font-size: 15px;
+       display: inline-flex;
+       align-items: center;
+       gap: 8px;
+       transition: gap 0.3s ease;
+   }
+   
+   /* ==========================================================================
+      16. VIDEO INTRO
+      ========================================================================== */
+   
+   .video-intro-overlay {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100vw;
+       height: 100vh;
+       background: var(--color-white);
+       z-index: 9999;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       opacity: 0;
+       visibility: visible;
+       transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+   }
+   
+   .video-intro-overlay.visible {
+       opacity: 1;
+   }
+   
+   .video-intro-overlay.hidden {
+       opacity: 0;
+       visibility: hidden;
+       pointer-events: none;
+   }
+   
+   .video-intro-container {
+       position: relative;
+       width: 100%;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       overflow: hidden;
+   }
+   
+   .video-intro {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       min-width: 100%;
+       min-height: 100%;
+       width: auto;
+       height: auto;
+       transform: translate(-50%, -50%);
+       object-fit: contain;
+       opacity: 0;
+       transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+   }
+   
+   .video-intro.loaded {
+       opacity: 1;
+   }
+   
+   .video-intro-logo {
+       position: relative;
+       z-index: 10;
+       text-align: center;
+       opacity: 0;
+       transform: translateY(40px) scale(0.95);
+       transition: opacity 1.5s ease, transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+   }
+   
+   .video-intro-logo.visible {
+       opacity: 1;
+       transform: translateY(0) scale(1);
+   }
+   
+   .video-intro-logo img {
+       max-height: 150px;
+       width: auto;
+       filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+   }
+   
+   .video-intro-logo h1 {
+       color: var(--color-primary);
+       font-family: 'Ruslan Display', serif;
+       font-size: 32px;
+       margin: 0;
+   }
+   
+   body.video-intro-active #site-header,
+   body.video-intro-active .site-content,
+   body.video-intro-active .site-footer {
+       opacity: 0;
+       visibility: hidden;
+       transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1), visibility 2s ease;
+   }
+   
+   body:not(.video-intro-active) #site-header,
+   body:not(.video-intro-active) .site-content,
+   body:not(.video-intro-active) .site-footer {
+       opacity: 1;
+       visibility: visible;
+   }
+   
+   body:not(.home) .video-intro-overlay {
+       display: none !important;
+   }
+   
+   body.home .video-intro-overlay {
+       display: flex;
+   }
+   
+   /* ==========================================================================
+      17. СЛАЙДЕР
+      ========================================================================== */
+   
+   .church-home-slider {
+       position: relative;
+       width: 100%;
+       height: 100vh;
+       max-height: 700px;
+       min-height: 400px;
+       overflow: hidden;
+       background: #000;
+   }
+   
+   .slider-container {
+       position: relative;
+       width: 100%;
+       height: 100%;
+   }
+   
+   .slider-slide {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-size: cover;
+       background-position: center;
+       opacity: 0;
+       transition: opacity 1s ease-in-out;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+   
+   .slider-slide.active {
+       opacity: 1;
+   }
+   
+   .slider-overlay {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0,0,0,0.4);
+   }
+   
+   .slider-content {
+       position: relative;
+       z-index: 2;
+       text-align: center;
+       color: var(--color-white);
+       padding: 20px;
+       max-width: 800px;
+   }
+   
+   .slider-title {
+       font-size: 48px;
+       font-weight: 700;
+       margin-bottom: 15px;
+       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+       animation: slideUp 0.8s ease-out;
+       font-family: 'Ruslan Display', serif;
+       color: var(--color-white);
+   }
+   
+   .slider-subtitle {
+       font-size: 20px;
+       margin-bottom: 25px;
+       text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+       animation: slideUp 0.8s ease-out 0.2s both;
+       color: var(--color-white);
+   }
+   
+   .slider-button {
+       display: inline-block;
+       padding: 15px 35px;
+       background: var(--color-accent);
+       color: var(--color-primary) !important;
+       text-decoration: none;
+       border-radius: 50px;
+       font-weight: 600;
+       transition: all 0.3s ease;
+       animation: slideUp 0.8s ease-out 0.4s both;
+   }
+   
+   .slider-button:hover {
+       background: var(--color-accent-hover);
+       transform: translateY(-2px);
+   }
+   
+   .slider-nav {
+       position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+       background: rgba(255,255,255,0.2);
+       border: none;
+       color: var(--color-white);
+       width: 50px;
+       height: 50px;
+       border-radius: 50%;
+       cursor: pointer;
+       z-index: 10;
+       transition: all 0.3s ease;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+   
+   .slider-nav:hover {
+       background: rgba(255,255,255,0.4);
+   }
+   
+   .slider-prev { left: 20px; }
+   .slider-next { right: 20px; }
+   
+   .slider-dots {
+       position: absolute;
+       bottom: 30px;
+       left: 50%;
+       transform: translateX(-50%);
+       display: flex;
+       gap: 10px;
+       z-index: 10;
+   }
+   
+   .slider-dot {
+       width: 12px;
+       height: 12px;
+       border-radius: 50%;
+       border: 2px solid var(--color-white);
+       background: transparent;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+   
+   .slider-dot.active {
+       background: var(--color-accent);
+       border-color: var(--color-accent);
+   }
+   
+   /* ==========================================================================
+      18. ПОДВАЛ
+      ========================================================================== */
+   
+   .site-footer {
+       background: var(--color-primary);
+       color: var(--color-text-on-dark);
+       padding: 60px 0 30px;
+   }
+   
+   .footer-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+       gap: 40px;
+       margin-bottom: 40px;
+   }
+   
+   .footer-widget h4 {
+       color: var(--color-accent);
+       margin-bottom: 20px;
+       font-size: 18px;
+       font-family: 'Cormorant Garamond', serif;
+   }
+   
+   .footer-widget ul {
+       list-style: none;
+   }
+   
+   .footer-widget ul li {
+       margin-bottom: 10px;
+   }
+   
+   .footer-widget ul li a {
+       color: rgba(255,255,255,0.8);
+       transition: var(--transition);
+   }
+   
+   .footer-widget ul li a:hover {
+       color: var(--color-accent);
+       padding-left: 5px;
+   }
+   
+   .footer-bottom {
+       text-align: center;
+       padding-top: 25px;
+       border-top: 1px solid rgba(201, 169, 97, 0.3);
+       color: rgba(255,255,255,0.6);
+       font-size: 14px;
+   }
+   
+   /* ==========================================================================
+      19. АДАПТИВНОСТЬ
+      ========================================================================== */
+   
+   /* Планшеты */
+   @media (min-width: 769px) and (max-width: 1024px) {
+       .services-grid,
+       .news-grid {
+           grid-template-columns: repeat(2, 1fr);
+       }
+       
+       .hero-title {
+           font-size: 36px !important;
+       }
+   }
+   
+   /* Мобильные до 992px */
+   @media (max-width: 992px) {
+       .mobile-toggle {
+           display: block;
+       }
+       
+       .main-navigation {
+           display: none !important;
+       }
+       
+       .hero {
+           min-height: 450px;
+           padding: 80px 20px;
+       }
+       
+       .hero-title {
+           font-size: 32px !important;
+       }
+       
+       .hero-subtitle {
+           font-size: 18px !important;
+       }
+       
+       .services-grid,
+       .news-grid {
+           grid-template-columns: repeat(2, 1fr);
+           gap: 20px;
+       }
+       
+       .history-card {
+           grid-template-columns: 1fr;
+           min-height: auto;
+       }
+       
+       .history-card-image-wrapper {
+           height: 250px;
+       }
+   }
+   
+   /* Мобильные до 768px */
+   @media (max-width: 768px) {
+       .hero {
+           min-height: 400px;
+           padding: 60px 15px;
+       }
+       
+       .hero-title {
+           font-size: 26px !important;
+       }
+       
+       .hero-subtitle {
+           font-size: 16px !important;
+       }
+       
+       .services-grid,
+       .news-grid {
+           grid-template-columns: 1fr;
+           gap: 20px;
+       }
+       
+       .services-section,
+       .news-section,
+       .schedule-section {
+           padding: 50px 0 !important;
+       }
+       
+       .schedule-row {
+           grid-template-columns: 1fr;
+           gap: 10px;
+           text-align: center;
+       }
+       
+       .history-card-content-wrapper {
+           padding: 20px 15px;
+       }
+       
+       .history-card-title {
+           font-size: 20px;
+       }
+       
+       .footer-grid {
+           grid-template-columns: 1fr;
+           gap: 30px;
+       }
+       
+       h1 { font-size: 28px !important; }
+       h2 { font-size: 24px !important; }
+       h3 { font-size: 20px !important; }
+       
+       .church-home-slider {
+           height: 80vh;
+           max-height: 450px;
+       }
+       
+       .slider-title {
+           font-size: 26px;
+       }
+   }
+   
+   /* Мобильные до 480px */
+   @media (max-width: 480px) {
+       .hero {
+           min-height: 350px;
+           padding: 50px 15px;
+       }
+       
+       .hero-title {
+           font-size: 22px !important;
+       }
+       
+       .hero-subtitle {
+           font-size: 14px !important;
+       }
+       
+       .service-card {
+           padding: 20px 15px;
+       }
+       
+       .service-icon {
+           width: 50px;
+           height: 50px;
+           font-size: 20px;
+       }
+       
+       .news-image {
+           height: 150px;
+       }
+       
+       .history-card-image-wrapper {
+           height: 180px;
+       }
+       
+       .container {
+           padding: 0 10px;
+       }
+       
+       h1 { font-size: 24px !important; }
+       h2 { font-size: 20px !important; }
+       h3 { font-size: 18px !important; }
+       
+       .church-home-slider {
+           height: 85vh;
+           max-height: 400px;
+       }
+       
+       .slider-title {
+           font-size: 22px;
+       }
+   }
+   
+   /* Touch-устройства */
+   @media (hover: none) {
+       .service-card:hover,
+       .news-card:hover,
+       .history-card:hover {
+           transform: none;
+       }
+       
+       a, button {
+           min-height: 44px;
+           min-width: 44px;
+       }
+   }
+   
+   /* Уменьшение анимаций */
+   @media (prefers-reduced-motion: reduce) {
+       *, *::before, *::after {
+           animation-duration: 0.01ms !important;
+           animation-iteration-count: 1 !important;
+           transition-duration: 0.01ms !important;
+           scroll-behavior: auto !important;
+       }
+   }
